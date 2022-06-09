@@ -15,17 +15,6 @@
       </div>
       <van-button color="linear-gradient(to right, #df83cd, #6d76ea)" @click="login_move"> Login </van-button>
     </div>
-    <div @click="showPopup" class="text"  :style="{opacity: bottom_txt? 0:1}">使 用 须 知</div>
-    <van-popup v-model:show="show">
-      <div>
-       <span style="font-size: 18px">github Link</span>
-        <div><span style="font-size: 12px">-机检无反应</span></div>
-          <div><span  style="font-size: 12px">-不会收集任何个人信息</span></div>
-        <div><span style="font-size: 12px" >-不再更新</span></div>
-      </div>
-    </van-popup>
-    <van-picker id="scroller" ref="dom" title="" :columns="columns" @confirm="onScrollerConfirm" @cancel="alert_picker" @change="onChange" />
-  </div>
 </template>
 <script>
 import { getWeather, getWeatherNow } from '../utils/weather'
@@ -40,7 +29,7 @@ export default {
     return {
       name: '',
       college: '',
-      move_item: '民主',
+      move_item: '富强',
       temperature: {},
       nowtemperature: 0,
       form_show: true,
