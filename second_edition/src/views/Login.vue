@@ -15,6 +15,11 @@
       </div>
       <van-button color="linear-gradient(to right, #df83cd, #6d76ea)" @click="login_move"> Login </van-button>
     </div>
+    <div @click="showPopup" class="text"  :style="{opacity: bottom_txt? 0:1}">使 用 须 知</div>
+    <van-popup v-model:show="show">
+    </van-popup>
+    <van-picker id="scroller" ref="dom" title="" :columns="columns" @confirm="onScrollerConfirm" @cancel="alert_picker" @change="onChange" />
+  </div>
 </template>
 <script>
 import { getWeather, getWeatherNow } from '../utils/weather'
